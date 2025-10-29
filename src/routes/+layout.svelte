@@ -1,12 +1,19 @@
 <script lang="ts">
 	import '../app.css';
 	import favicon from '$lib/assets/favicon.svg';
+	import {fade} from 'svelte/transition';
+	import type { Snippet } from 'svelte';
+	import type { LayoutData } from '../../.svelte-kit/types/src/routes/$types';
 
-	let { children } = $props();
+	let { children, data }: {children: Snippet<[]>, data: LayoutData} = $props();
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+{#key data.pathname}
+	<div in:fade={{ duration: 300, delay: 400 }} out:fade={{ duration: 300 }}>
+		{@render children?.()}
+	</div>
+{/key}

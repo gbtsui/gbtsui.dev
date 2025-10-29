@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
+
 	let name_translations = [
 		"gabriel augustine tsui",
 		"gabryś augustyn szu",
@@ -54,9 +56,10 @@
 	function onpointerout() {
 		typeScrambleTo(name_translations[0])
 	}
+
 </script>
 
-<div class="bg-white text-black">
+<div class="w-[100vw] h-[100vh] bg-white text-black flex flex-row justify-between">
 	<div class="flex flex-col gap-5 p-2 mt-[45vh] ml-[5vw] cursor-default select-none w-1/2">
 		<h1
 			class="text-4xl hover:text-5xl transition-all"
@@ -66,5 +69,9 @@
 			{current_text}
 		</h1>
 		<p>welcome to my corner of the internet</p>
+	</div>
+	<div class="flex flex-col text-end text-xl gap-6 mr-[5vw] mt-[45vh] content-center">
+		<a class="text-2xl hover:text-3xl transition-all" href={resolve("/about-me")}>about me</a>
+		<a class="text-2xl hover:text-3xl transition-all" href={resolve("/portfolio")}>portfolio</a>
 	</div>
 </div>
