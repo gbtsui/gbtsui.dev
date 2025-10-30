@@ -7,3 +7,11 @@
 body {
     font-family: 'Noto Serif HK Variable', serif;
 }
+
+@theme {
+    --color-crimson: #780000;
+    --color-sanguine: #C1121F;
+    --color-light-cream: #FDF0D5;
+    --color-prussianblue: #003049;
+    --color-airsuperiority: #669BBC;
+}

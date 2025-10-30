@@ -59,10 +59,10 @@
 
 </script>
 
-<div class="w-[100vw] h-[100vh] bg-white text-black flex flex-row justify-between">
+<div class="w-[100vw] h-[100vh] bg-light-cream text-prussianblue flex flex-row justify-between">
 	<div class="flex flex-col gap-5 p-2 mt-[45vh] ml-[5vw] cursor-default select-none w-1/2">
 		<h1
-			class="text-4xl hover:text-5xl transition-all"
+			class="text-4xl hover:text-5xl hover:text-sanguine transition-all"
 			on:pointerover={onpointerover}
 			on:pointerout={onpointerout}
 		>
@@ -71,7 +71,7 @@
 		<p>welcome to my corner of the internet</p>
 	</div>
 	<div class="flex flex-col text-end text-xl gap-6 mr-[5vw] mt-[45vh] content-center">
-		<a class="text-2xl hover:text-3xl transition-all" href={resolve("/about-me")}>about me</a>
-		<a class="text-2xl hover:text-3xl transition-all" href={resolve("/portfolio")}>portfolio</a>
+		<a class="text-2xl hover:text-3xl hover:text-airsuperiority transition-all" href={resolve("/about-me")}>about me</a>
+		<a class="text-2xl hover:text-3xl hover:text-airsuperiority transition-all" href={resolve("/portfolio")}>portfolio</a>
 	</div>
 </div>
